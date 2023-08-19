@@ -1,5 +1,261 @@
-.main {
-    width: 400;
-    margin-left: auto;
-    margin-right: auto;
+:root {
+  --primary: #192656;
+  --secondary: #f5f5f5;
+  --shadow-color: rgba(0, 4, 4, 0.25);
+  --white: #fff;
+}
+@font-face {
+  font-family: "Titillium_Web"; /* A name for your custom font */
+  src: url("../Assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: nromal;
+}
+@font-face {
+  font-family: "Titillium_Web"; /* A name for your custom font */
+  src: url("../Assets/fonts/Titillium_Web/TitilliumWeb-Light.ttf")
+    format("truetype");
+  font-weight: lighter;
+  font-style: nromal;
+}
+@font-face {
+  font-family: "Titillium_Web"; /* A name for your custom font */
+  src: url("../Assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: nromal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+body {
+  background-color: var(--secondary);
+  font-family: "Titillium_Web", sans-serif;
+  font-weight: normal;
+}
+
+/* Nav Design */
+
+.top-nav {
+  display: flex;
+  gap: 1em;
+  justify-content: end;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0 2em;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0;
+  background-color: var(--white);
+}
+
+nav a,
+.link a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a:hover,
+.link a:hover {
+  font-weight: bold;
+}
+
+nav ul,
+.link ul,
+.button-group {
+  display: flex;
+  gap: 1em;
+}
+
+nav li,
+.link li {
+  list-style: none;
+}
+
+/* Container Design */
+.container {
+  padding: 0 10%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 5%;
+}
+
+.grid-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5em;
+}
+
+.margin-container {
+  margin: 5em 0;
+}
+
+.shadow-custom {
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px var(--shadow-color);
+}
+
+.text-center {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  text-align: center;
+  font-weight: lighter;
+  padding: 4em;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2em 0;
+}
+
+.title-center {
+  text-align: center;
+}
+
+.card {
+  display: grid;
+  place-items: center;
+  filter: saturate(0);
+}
+
+/* footer */
+footer {
+  background-color: var(--primary);
+  display: flex;
+  padding: 5em 0;
+  color: var(--secondary);
+  place-items: center;
+  justify-content: space-around;
+}
+
+.footer-logo {
+  text-align: end;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+/* input  */
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: var(--shadow-color);
+}
+
+button {
+  color: var(--primary);
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  background-color: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+button:hover {
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.unsaturate {
+  filter: saturate(1) !important;
+}
+
+/* Pagination */
+.pagination {
+  background-color: white;
+  color: blue;
+  border: none;
+}
+.pagination-active {
+  background-color: rgb(115, 115, 231);
+  color: white;
+  border: none;
+}
+.pagination-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin: 4em;
+}
+
+/* search Input */
+.input-container {
+  position: relative;
+  margin: 2em;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.input-field {
+  padding-left: 40px !important;
+}
+
+.open-card {
+  margin: 3em;
+  padding: 3em;
+  background-color: var(--white);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.icon-button {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
