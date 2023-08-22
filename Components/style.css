@@ -259,3 +259,20 @@ form {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 1200px){
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul,
+  .button-group {
+    flex-direction: column;
+    text-align: center;
+  }
+  .grid-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5em; 
+  }
+}
+
